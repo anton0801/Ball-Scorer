@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ScorerSettingsView: View {
     
+    @Environment(\.presentationMode) var prm
     private var screenWidth: CGFloat {
         get {
             return UIScreen.main.bounds.width
@@ -34,7 +35,7 @@ struct ScorerSettingsView: View {
         VStack {
             HStack {
                 Button {
-                    
+                    prm.wrappedValue.dismiss()
                 } label: {
                     Image("home_btn")
                 }
